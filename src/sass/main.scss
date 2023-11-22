@@ -1,0 +1,61 @@
+@import 'colors', 'components', 'mixin', 'min', 'mid', 'large';
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+	font-family: 'Montserrat', sans-serif;
+	font-family: 'Roboto', sans-serif;
+}
+
+.info-bar {
+	position: absolute;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+	top: 0;
+	width: 100%;
+	background-color: #263180;
+	color: white;
+	i {
+		color: white;
+		padding: 0.3em 0.5em;
+	}
+}
+
+.nav {
+	display: block;
+	margin-top: 2em;
+	&__hidden-menu {
+		transform: translateY(-300px);
+		width: 100%;
+		height: 30%;
+		padding: 3rem;
+		padding-top: 0;
+		padding-bottom: 0;
+		background-color: rgb(174, 215, 226);
+		justify-content: center;
+		text-align: center;
+		transition: transform 0.3s;
+		ul {
+			list-style-type: none;
+			text-align: center;
+			a {
+				color: #2e2e2e;
+				text-decoration: none;
+				li {
+					padding: 0.6rem;
+				}
+			}
+		}
+	}
+}
+
+.hidden-navigation {
+	transform: translateY(0);
+}
